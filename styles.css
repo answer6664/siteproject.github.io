@@ -1,0 +1,973 @@
+/* Общие стили */
+
+
+html {
+  scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  height: 80px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  flex: 1;
+  justify-content: center;
+  
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f44336;
+  transform: scale(1.1);
+}
+
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.phone-number {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.phone-number1 {
+  color: rgb(255, 0, 0);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: block;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.request-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 20px;
+}
+
+.request-button:hover {
+  background-color: #d32f2f;
+}
+
+.separator-line {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  width: 100%;
+}
+
+/* Новый блок с белым фоном */
+.urgent-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 140px 150px;
+  background-color: #ffffff;
+}
+
+.urgent-content {
+  flex: 1;
+  padding-right: 30px;
+  position: relative;
+  display: block;
+}
+
+.urgent-content h2 {
+  font-size: 56px;
+  font-weight: 600;
+  color: #000000;
+  transform: translateY(100x);
+}
+
+.urgent-content p {
+  font-size: 46px;
+  color: #ff1100;
+  transform: translateY(10px);
+}
+
+.urgent-content i {
+  font-size: 18px;
+  color: #363434;
+  font-style: italic;
+  display: block;  /* Каждый элемент <i> будет на новой строке */
+  margin-bottom: 10px; 
+  transform: translateY(20px);
+  font-weight: bold;
+  /* Добавить отступы между строками */
+}
+
+.mirror-image {
+  transform: scaleX(-1);
+}
+
+
+.urgent-image {
+  flex: 1;
+  text-align: right;
+}
+
+.urgent-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Новый блок с типами транспортных средств */
+.car-types-section {
+  text-align: center;
+  padding: 350px 100px; /* Уменьшаем верхний и нижний отступ на 150px */
+  background-color: #ffffff;
+  position: relative;
+}
+
+.car-types-content h2 {
+  font-size: 44px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 40px;
+  position: relative;
+  top: -250px; /* Отрегулировано по аналогии с вторым блоком */
+}
+
+.car-types-images {
+  display: flex;
+  justify-content: center; /* Центрируем блок с изображениями */
+  gap: 30px; /* Увеличиваем промежуток между элементами */
+  flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+  position: relative;
+  width: 100%; /* Задаем ширину 100% для использования всего пространства */
+  transform: translateY(-200px);
+}
+
+.car-type-item {
+  flex: 1; /* Элементы занимают одинаковое пространство */
+  min-width: 250px; /* Минимальная ширина каждого элемента */
+  max-width: 30%; /* Ограничиваем максимальную ширину */
+  text-align: center;
+  margin: 0; /* Убираем внешние отступы для более плотного расположения */
+}
+
+.car-type-item img {
+  width: 100%; /* Изображения растягиваются по доступной ширине */
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover; /* Сохраняем пропорции изображений */
+}
+
+.car-type-item p {
+  font-size: 32px;
+  color: #000000;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.car-type-item .description {
+  font-size: 22px;
+  color: #3a3a3a;
+  font-weight: normal;
+  margin-top: 10px;
+  padding: 0 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+/* Группы галочек */
+.galochka-group {
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение элементов по строкам */
+  gap: 40px; /* Увеличиваем промежуток между элементами */
+  flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку при необходимости */
+  width: 100%; /* Занимает всю ширину контейнера */
+  max-width: 1000px; /* Ограничиваем максимальную ширину */
+  margin: 0 auto; /* Центрируем группу */
+  margin-top: -80px; /* Сдвигаем группу на 50 пикселей вверх */
+}
+
+/* Индивидуальная галочка с текстом */
+.galochka {
+  display: flex;
+  flex-direction: row; /* Располагаем иконку и текст горизонтально */
+  align-items: center; /* Центрируем элементы по вертикали */
+  gap: 10px; /* Отступ между изображением и текстом */
+  font-size: 24px; /* Увеличиваем размер текста */
+  font-weight: 600;
+  color: #000000;
+  text-align: left; /* Текст выравнивается по левому краю */
+  flex: 1 1 30%; /* Элементы растягиваются по ширине и имеют минимальный размер */
+}
+
+/* Иконка галочки */
+.galochka-icon {
+  width: 30px; /* Увеличиваем размер иконки */
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px; /* Добавляем отступ справа от иконки */
+}
+
+
+ /*  3 блок*/
+ .how-we-work-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Убедимся, что блок занимает всю ширину */
+  background-color: #f4f4f4;
+  max-width: 100%;
+  position: relative;
+}
+
+
+.how-we-work-content {
+  text-align: center; /* Центрируем весь контент */
+  padding: 300px;
+  background-color: #ffffff;
+  width: 100%;
+  
+}
+
+
+.how-we-work-content h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 50px;
+  transform: translateY(-200px);
+}
+
+/* Контейнер для шагов работы */
+.work-process {
+  display: flex;
+  justify-content: space-between; /* Равномерное распределение с равными промежутками */
+  width: 100%; /* Полная ширина */
+  gap: 30px; /* Регулируйте значение для контроля промежутков */
+  transform: translateY(-100px);
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column; /* Изменили направление на колонку */
+  align-items: center; /* Центрируем все элементы в колонке */
+  flex: 1 1 23%; /* Каждому блоку дается 23% ширины, чтобы поместилось 4 блока в одну строку */
+  min-width: 250px;
+  max-width: 100%;
+  text-align: center; /* Текст по центру */
+}
+
+.work-icon {
+  width: 80px; /* Увеличиваем размер иконки */
+  height: 80px;
+  margin-bottom: 10px; /* Отступ от иконки до заголовка */
+}
+
+.work-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.work-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем текст */
+  font-size: 26px;
+}
+
+.work-title {
+  font-size: 80px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.work-text .work-title {
+  color: #000000;
+}
+
+.work-item p {
+  font-size: 24px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.work-text .work-small {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Маленький текст */
+.small-text {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold !important;
+}
+
+
+/* продолжение */
+
+.evaluate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.evaluate-img img {
+  width: 50px;
+  height: auto;
+}
+
+.evaluate-btnn {
+  background-color: #ff0000;
+  color: white;
+  font-size: 20px;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.evaluate-btn {
+  background-color: #ff0000;
+  color: white;
+  font-size: 20px;
+  padding: 20px 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.evaluate-btn:hover {
+  background-color: #000000;
+}
+
+/* Модальное окно */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+button[type="submit"] {
+  background-color: #ff0000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #4e1912;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .evaluate-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .evaluate-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+}
+
+/* Стиль для секции "Контакты" */
+.contacts-section {
+  background-color: #fff; /* Белый фон */
+  padding: 60px 20px; /* Отступы сверху и снизу */
+  text-align: center; /* Центрируем заголовок */
+}
+
+.contacts-section .contacts-title {
+  font-size: 48px; /* Крупный шрифт */
+  font-weight: bold;
+  color: #000;  /* Черный цвет для заголовка */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Сделать текст заглавными буквами */
+}
+
+/* Контейнер для контактной информации */
+.contacts-info {
+  display: flex;
+  justify-content: center; /* Центрируем содержимое */
+  align-items: center; /* Центрируем по вертикали */
+  gap: 50px; /* Отступы между левой и правой частью */
+  margin-top: 40px;
+}
+
+.form-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(120px);
+}
+
+.contact-image {
+  width: 100%; /* Ширина картинки */
+  max-width: 500px; /* Ограничиваем максимальную ширину картинки */
+  height: auto; /* Сохраняем пропорции */
+}
+
+.form-right {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts-subtitle {
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.evaluate-btn:hover {
+  background-color: #000;
+}
+
+/* Стили для иконок мессенджеров */
+.contacts-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-icon {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Номер телефона */
+.contacts-phone {
+  font-size: 32px;
+  font-weight: bold;
+  color: #e20000;
+  margin-top: 40px;
+}
+
+.phone-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #e20000;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+}
+/* Общие адаптивные стили */
+/* Общие адаптивные стили */
+/* Общие адаптивные стили */
+/* Общие адаптивные стили */
+/* Общие адаптивные стили */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .urgent-section {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  .urgent-content {
+    padding-right: 0;
+  }
+
+  .urgent-content h2 {
+    font-size: 36px;
+    transform: translateY(50px);
+  }
+
+  .urgent-image {
+    flex: 1;
+    text-align: right;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transform: scale(0.77); /* Уменьшает размер в 1.3 раза */
+    transform-origin: center; /* Устанавливает центр изображения как точку трансформации */
+  }
+  
+
+  .urgent-content p {
+    font-size: 24px;
+    transform: translateY(50px);
+  }
+
+  .urgent-content i {
+    font-size: 13px;
+    transform: translateY(50px);
+  }
+  .car-types-section {
+    padding: 60px 20px;
+  }
+
+
+
+  .car-types-content h2 {
+    font-size: 32px;
+    top: 50px;
+  
+  }
+
+  .car-types-images {
+    gap: 15px;
+    transform: translateY(0);
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+
+  .car-type-item {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .car-type-item .description {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .galochka-group {
+    gap: 20px;
+    margin-top: 0;
+  }
+
+  .galochka {
+    font-size: 18px;
+  }
+
+  .galochka p {
+    font-size: 12px;
+    transform: translateY(-60px);
+  }
+
+  .galochka-icon {
+    width: 15px; 
+    height: 15px;
+    object-fit: contain;
+    margin-right: -5px; 
+    transform: translateY(-60px);
+  }
+
+  .how-we-work-section {
+    padding: 30px 15px;
+  }
+
+  .how-we-work-content {
+    padding: 30px 15px;
+  }
+
+  .how-we-work-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    transform: translateY(0);
+  }
+
+  .work-process {
+    flex-direction: column;
+    gap: 20px;
+    transform: translateY(0);
+  }
+
+  .work-item {
+    min-width: 100%;
+  }
+
+  .work-text .work-title {
+    font-size: 20px;
+    transform: translateY(-35px);
+
+  }
+
+  .work-text .work-small {
+    font-weight: bold;
+    font-size: 14px;
+    transform: translateY(-40px);
+  }
+
+  .work-item p {
+    font-size: 18px;
+  }
+
+  .small-text {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .work-icon img {
+    width: 66.66%; /* Уменьшение размера до 2/3 (1.5 раза меньше 100%) */
+    height: auto;
+}
+
+
+  .evaluate-container {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .evaluate-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .contacts-section {
+    padding: 30px 15px;
+  }
+
+  .contacts-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .contacts-info .form-left {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+ 
+
+  .form-left {
+    transform: translateX(0);
+  }
+
+  .form-right {
+    width: 100%;
+  }
+
+  .contacts-subtitle {
+    font-size: 22px;
+  }
+
+  .form-group label {
+    font-size: 16px;
+  }
+
+  .contacts-phone {
+    font-size: 24px;
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+
+.menu-links {
+  display: flex;
+  flex-direction: column; /* Элементы будут располагаться в столбик */
+  align-items: flex-start; /* Выровняем элементы по левому краю */
+  gap: 10px; /* Добавим отступы между элементами */
+}
+
+.menu-links  a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menu-links a:hover {
+    color: #f44336;
+    transform: scale(1.1);
+  }
+
+.contact-info a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.apply-button {
+  display: block;
+  background-color: #ff4d4d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #e64545;
+}
+
+/* Для корректного отображения */
+.contact-info a:hover {
+  color: #ff4d4d;
+}
+
+/* Стили для мобильной версии */
+@media screen and (max-width: 768px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Скрыто за пределами экрана справа */
+    width: 300px; /* Ширина выдвигающейся панели */
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out; /* Анимация выдвижения */
+  }
+  
+  .mobile-menu.active {
+    right: 0; /* Шторка выдвинута */
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .mobile-menu-close {
+    align-self: flex-end;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .navbar .nav-links,
+  .navbar .contact-info, .logo {
+    display: none; /* Скрываем на мобильных устройствах */
+  }
+}
+
+/* Стили для десктопной версии остаются без изменений */
+@media screen and (min-width: 769px) {
+  .menu-icon {
+    display: none; /* Скрыть иконку меню на десктопах */
+  }
+
+  .mobile-menu {
+    display: none; /* Убедиться, что шторка скрыта */
+  }
+}
+
+
+/* Уменьшение высоты navbar на мобильных устройствах */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 0px; /* Уменьшите значение по необходимости */
+    padding: 5px 10px; /* Подстройте внутренние отступы */
+  }
+
+  .navbar-brand,
+  .menu-icon {
+    height: 0px; /* Подгоните размеры для элементов внутри navbar */
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    font-size: 2rem; /* Увеличивает размер шрифта, что делает иконку больше */
+    width: 40px; /* Измените значение по необходимости */
+    height: 40px; /* Измените значение по необходимости */
+    position: absolute;
+    right: 10px; /* Отступ от правого края, измените по необходимости */
+    top: 15px; /* Регулирует отступ сверху */
+  }
+}
+
+.menu-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.menu-icons a {
+  display: inline-block;
+}
+
+.menu-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.menu-icons img:hover {
+  transform: scale(1.1);
+}
